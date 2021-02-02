@@ -10,9 +10,14 @@ const PARKS =
 const ROADS =
   'https://raw.githubusercontent.com/chris-sarli/building-age-map/main/data/roads.geojson';
 
+var windowOffset = 0;
+if (window.innerWidth > 632) {
+  windowOffset = 0.02;
+}
+
 const INITIAL_VIEW_STATE = { 
-  latitude: 41.82408 - 0.008,
-  longitude: -71.41275 + 0.02,
+  latitude: 41.8231,
+  longitude: -71.4189 + (windowOffset),
   zoom: 12,
   bearing: 0,
   pitch: 0
