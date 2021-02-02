@@ -1,4 +1,4 @@
-import './style.css';
+require('./style.css');
 
 import {Deck} from '@deck.gl/core';
 import {GeoJsonLayer, ArcLayer} from '@deck.gl/layers';
