@@ -74,7 +74,7 @@ var parcelLayer = new GeoJsonLayer({
   getLineWidth: 3,
   pickable: true,
   getFillColor: d => gett(d),
-  onClick: (info, event) => openInNewTab("http://gis.vgsi.com/providenceri/Parcel.aspx?pid=" + info.object.properties.CAMAExtract_AV_PID),
+  onClick: (info, event) => openInNewTab("https://gis.vgsi.com/providenceri/Parcel.aspx?pid=" + info.object.properties.CAMAExtract_AV_PID),
   onDataLoad: (v, c) => deleteModal()
 })
 
