@@ -11,12 +11,14 @@ const ROADS =
   'https://raw.githubusercontent.com/chris-sarli/building-age-map/main/data/roads.geojson';
 
 var windowOffset = 0;
+var topOffset = -0.015;
 if (window.innerWidth > 632) {
   windowOffset = 0.02;
+  topOffset = -0.005;
 }
 
 const INITIAL_VIEW_STATE = { 
-  latitude: 41.8231,
+  latitude: 41.8231 + topOffset,
   longitude: -71.4189 + (windowOffset),
   zoom: 12,
   bearing: 0,
