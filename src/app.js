@@ -4,7 +4,7 @@ import {Deck} from '@deck.gl/core';
 import {GeoJsonLayer, ArcLayer} from '@deck.gl/layers';
 
 const PARCELS =
-  'https://raw.githubusercontent.com/chris-sarli/building-age-map/main/data/pvd_parcels.geojson';
+  'https://raw.githubusercontent.com/chris-sarli/building-age-map/main/data/pvd_parcels_buffer.geojson';
 const PARKS = 
   'https://raw.githubusercontent.com/chris-sarli/building-age-map/main/data/parks-open-space.geojson';
 const ROADS =
@@ -73,12 +73,10 @@ var parcelLayer = new GeoJsonLayer({
   id: 'parcels',
   data: PARCELS,
   // Styles
-  stroked: true,
+  stroked: false,
   filled: true,
-  lineWidthMinPixels: 0,
   opacity: 1,
   getLineColor: [0, 0, 0, 255],
-  getLineWidth: 3,
   pickable: true,
   getFillColor: d => gett(d),
   onClick: (info, event) => openInNewTab("https://gis.vgsi.com/providenceri/Parcel.aspx?pid=" + info.object.properties.CAMAExtract_AV_PID),
